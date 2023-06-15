@@ -1,3 +1,4 @@
+from pathlib import Path
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
 from PyQt6.QtGui import QIcon
 
@@ -12,6 +13,7 @@ class MainWindow(QMainWindow):
         self.setFixedSize(850, 150)
 
 app = QApplication([])
+app.setStyleSheet(Path('style.css').read_text())
 
 window = MainWindow()
 window.show()
