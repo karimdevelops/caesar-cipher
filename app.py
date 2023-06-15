@@ -9,6 +9,8 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Caesar Cipher")
         self.setWindowIcon(QIcon("img/logo.png"))
 
+        self.setFixedSize(850, 150)
+
 app = QApplication([])
 
 window = MainWindow()
