@@ -1,4 +1,5 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget
+from PyQt6.QtGui import QIcon
 
 class MainWindow(QMainWindow):
 
@@ -6,6 +7,7 @@ class MainWindow(QMainWindow):
         super().__init__()
 
         self.setWindowTitle("Caesar Cipher")
+        self.setWindowIcon(QIcon("img/logo.png"))
 
 app = QApplication([])
 
