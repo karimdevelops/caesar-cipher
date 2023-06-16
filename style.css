@@ -7,3 +7,8 @@ QMainWindow {
   color: #fffefe;
   font-weight: 800;
 }
+
+QPushButton {
+  margin-bottom: 120px;
+  font-size: 30px;
+}
