@@ -18,8 +18,8 @@ class MainWindow(QMainWindow):
         encrypt_button = QPushButton("Encryption")
         decrypt_button = QPushButton("Decryption")
 
-        encrypt_button.setMaximumSize(180, 170)
-        decrypt_button.setMaximumSize(180, 170)
+        encrypt_button.setFixedSize(180, 170)
+        decrypt_button.setFixedSize(180, 170)
 
         layout = QGridLayout()
         self.widget = QWidget()
