@@ -11,6 +11,8 @@ from PyQt6.QtWidgets import (
     QHBoxLayout
 )
 from PyQt6.QtGui import QIcon
+from PyQt6.QtCore import Qt
+
 
 class MainWindow(QMainWindow):
 
@@ -28,12 +30,13 @@ class MainWindow(QMainWindow):
 
         heading = QLabel("Caesar Cipher")
         heading.setObjectName("heading")
+        heading.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         encrypt_button = QPushButton("Encryption")
         decrypt_button = QPushButton("Decryption")
 
-        encrypt_button.setFixedSize(180, 170)
-        decrypt_button.setFixedSize(180, 170)
+        encrypt_button.setFixedSize(160, 170)
+        decrypt_button.setFixedSize(160, 170)
 
         page_layout.addWidget(heading)
         button_layout.addWidget(encrypt_button)

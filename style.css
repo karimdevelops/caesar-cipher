@@ -6,6 +6,7 @@ QMainWindow {
   font-size: 70px;
   color: #fffefe;
   font-weight: 800;
+  font-family: 'Courier New', Courier, monospace;
 }
 
 QPushButton {
