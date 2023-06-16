@@ -1,5 +1,5 @@
 from pathlib import Path
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QGridLayout
+from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QGridLayout, QPushButton
 from PyQt6.QtGui import QIcon
 
 class MainWindow(QMainWindow):
@@ -13,11 +13,15 @@ class MainWindow(QMainWindow):
         self.setFixedSize(850, 150)
 
         heading = QLabel("Caesar Cipher")
+        encrypt_button = QPushButton("Encryption")
+        decrypt_button = QPushButton("Decryption")
 
         layout = QGridLayout()
         widget = QWidget()
 
         layout.addWidget(heading, 0, 1)
+        layout.addWidget(encrypt_button, 1, 0)
+        layout.addWidget(decrypt_button, 1, 1)
 
         widget.setLayout(layout)
 
