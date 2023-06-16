@@ -10,16 +10,18 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Caesar Cipher")
         self.setWindowIcon(QIcon("img/logo.png"))
 
-        self.setFixedSize(850, 150)
+        self.setFixedSize(850, 450)
 
         heading = QLabel("Caesar Cipher")
+        heading.setObjectName("heading")
+
         encrypt_button = QPushButton("Encryption")
         decrypt_button = QPushButton("Decryption")
 
         layout = QGridLayout()
         widget = QWidget()
 
-        layout.addWidget(heading, 0, 1)
+        layout.addWidget(heading, 0, 0)
         layout.addWidget(encrypt_button, 1, 0)
         layout.addWidget(decrypt_button, 1, 1)
 
