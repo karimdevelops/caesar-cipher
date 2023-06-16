@@ -1,5 +1,15 @@
 from pathlib import Path
-from PyQt6.QtWidgets import QApplication, QMainWindow, QWidget, QLabel, QGridLayout, QPushButton, QLineEdit, QVBoxLayout
+
+from PyQt6.QtWidgets import (
+    QApplication, 
+    QMainWindow, 
+    QWidget, 
+    QLabel,
+    QPushButton, 
+    QLineEdit, 
+    QVBoxLayout,
+    QHBoxLayout
+)
 from PyQt6.QtGui import QIcon
 
 class MainWindow(QMainWindow):
@@ -12,6 +22,10 @@ class MainWindow(QMainWindow):
 
         self.setFixedSize(850, 450)
 
+        widget = QWidget()
+        page_layout = QVBoxLayout()
+        button_layout = QHBoxLayout()
+
         heading = QLabel("Caesar Cipher")
         heading.setObjectName("heading")
 
@@ -21,16 +35,14 @@ class MainWindow(QMainWindow):
         encrypt_button.setFixedSize(180, 170)
         decrypt_button.setFixedSize(180, 170)
 
-        layout = QGridLayout()
-        self.widget = QWidget()
+        page_layout.addWidget(heading)
+        button_layout.addWidget(encrypt_button)
+        button_layout.addWidget(decrypt_button)
 
-        layout.addWidget(heading, 0, 0)
-        layout.addWidget(encrypt_button, 1, 0)
-        layout.addWidget(decrypt_button, 1, 1)
+        page_layout.addLayout(button_layout)
+        widget.setLayout(page_layout)
 
-        self.widget.setLayout(layout)
-
-        self.setCentralWidget(self.widget)
+        self.setCentralWidget(widget)
 
         encrypt_button.released.connect(self.input_layout)
         decrypt_button.released.connect(self.input_layout)
