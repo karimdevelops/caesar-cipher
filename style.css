@@ -13,6 +13,7 @@ QMainWindow {
 QPushButton {
   margin-bottom: 120px;
   font-size: 30px;
+  color: white;
 }
 
 QPushButton#encryption_button {
