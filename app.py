@@ -10,7 +10,7 @@ from PyQt6.QtWidgets import (
     QVBoxLayout,
     QHBoxLayout
 )
-from PyQt6.QtGui import QIcon
+from PyQt6.QtGui import QIcon, QFontDatabase
 from PyQt6.QtCore import Qt
 
 
@@ -70,6 +70,12 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
 app = QApplication([])
+
+QFontDatabase.addApplicationFont('font/Roboto_Mono/RobotoMono-Bold.ttf')
+QFontDatabase.addApplicationFont('font/Roboto/Roboto-Medium.ttf')
+QFontDatabase.addApplicationFont('font/Anonymous/AnonymousPro-Regular.ttf')
+QFontDatabase.addApplicationFont('font/Roboto_Condensed/RobotoCondensed-Regular.ttf')
+
 app.setStyleSheet(Path('style.css').read_text())
 
 window = MainWindow()
