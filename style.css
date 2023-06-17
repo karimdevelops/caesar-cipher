@@ -16,6 +16,10 @@ QPushButton {
   color: white;
 }
 
+QPushButton:hover {
+  border: 2px solid white;
+}
+
 QPushButton#encryption_button {
   background-color: #03045e;
 }
