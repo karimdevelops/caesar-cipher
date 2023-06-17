@@ -38,12 +38,18 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
+        github_link = QLabel("<a href=https://github.com/karimdevelops/caesar-cipher>View Soure Code</a>")
+        github_link.setObjectName("github_link")
+        github_link.setOpenExternalLinks(True)
+        
+
         encryption_button.setFixedSize(160, 170)
         decryption_button.setFixedSize(160, 170)
 
         page_layout.addWidget(heading)
         button_layout.addWidget(encryption_button)
         button_layout.addWidget(decryption_button)
+        button_layout.addWidget(github_link)
 
         page_layout.addLayout(button_layout)
         widget.setLayout(page_layout)

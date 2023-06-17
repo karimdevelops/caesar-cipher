@@ -2,8 +2,8 @@ QMainWindow {
   background-color: #1d1f22;
 }
 
-#heading {
-  font-size: 70px;
+QLabel#heading {
+  font-size: 75px;
   /* color: #fffefe; */
   color: #00ee7c;
   font-weight: 800;
