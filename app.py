@@ -32,23 +32,26 @@ class MainWindow(QMainWindow):
         heading.setObjectName("heading")
         heading.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        encrypt_button = QPushButton("Encryption")
-        decrypt_button = QPushButton("Decryption")
+        encryption_button = QPushButton("Encryption")
+        encryption_button.setObjectName("encryption_button")
 
-        encrypt_button.setFixedSize(160, 170)
-        decrypt_button.setFixedSize(160, 170)
+        decryption_button = QPushButton("Decryption")
+        decryption_button.setObjectName("decryption_button")
+
+        encryption_button.setFixedSize(160, 170)
+        decryption_button.setFixedSize(160, 170)
 
         page_layout.addWidget(heading)
-        button_layout.addWidget(encrypt_button)
-        button_layout.addWidget(decrypt_button)
+        button_layout.addWidget(encryption_button)
+        button_layout.addWidget(decryption_button)
 
         page_layout.addLayout(button_layout)
         widget.setLayout(page_layout)
 
         self.setCentralWidget(widget)
 
-        encrypt_button.released.connect(self.input_layout)
-        decrypt_button.released.connect(self.input_layout)
+        encryption_button.released.connect(self.input_layout)
+        decryption_button.released.connect(self.input_layout)
 
     def input_layout(self):
         continue_button = QPushButton("Continue")

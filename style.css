@@ -14,3 +14,7 @@ QPushButton {
   margin-bottom: 120px;
   font-size: 30px;
 }
+
+QPushButton#encryption_button {
+  background-color: #03045e;
+}
