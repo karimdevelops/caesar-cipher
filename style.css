@@ -4,7 +4,8 @@ QMainWindow {
 
 #heading {
   font-size: 70px;
-  color: #fffefe;
+  /* color: #fffefe; */
+  color: #00ee7c;
   font-weight: 800;
   font-family: 'Courier New', Courier, monospace;
 }
