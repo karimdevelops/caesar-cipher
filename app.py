@@ -59,6 +59,9 @@ class MainWindow(QMainWindow):
 
     def input_layout(self):
         continue_button = QPushButton("Continue")
+        continue_button.setObjectName("continue_button")
+
+        continue_button.setFixedSize(160, 170)
 
         user_input = QTextEdit("")
         user_input.setObjectName("user_input")
