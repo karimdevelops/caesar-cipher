@@ -51,6 +51,9 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(decryption_button)
         button_layout.addWidget(github_link)
 
+        button_layout.setContentsMargins(207, 0, 0, 60)
+        button_layout.setSpacing(87)
+
         page_layout.addLayout(button_layout)
         widget.setLayout(page_layout)
 
