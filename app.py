@@ -7,6 +7,7 @@ from PyQt6.QtWidgets import (
     QLabel,
     QPushButton, 
     QLineEdit, 
+    QTextEdit,
     QVBoxLayout,
     QHBoxLayout
 )
@@ -58,19 +59,27 @@ class MainWindow(QMainWindow):
 
     def input_layout(self):
         continue_button = QPushButton("Continue")
-        user_input = QLineEdit("")
+
+        user_input = QTextEdit("")
+        user_input.setObjectName("user_input")
+        
         user_input.setPlaceholderText("Enter your text...")
+        user_input.setFixedSize(800, 100)
 
         layout = QVBoxLayout()
         
         layout.addWidget(user_input)
         layout.addWidget(continue_button)
 
+        layout.setContentsMargins(25, 60, 0, 0)
+
         self.widget = QWidget()
 
         self.widget.setLayout(layout)
 
         self.setCentralWidget(self.widget)
+
+        # continue_button.released.connect()
 
 app = QApplication([])
 
