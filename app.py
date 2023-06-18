@@ -71,6 +71,8 @@ class MainWindow(QMainWindow):
         layout.addWidget(user_input)
         layout.addWidget(continue_button)
 
+        layout.setContentsMargins(25, 60, 0, 0)
+
         self.widget = QWidget()
 
         self.widget.setLayout(layout)
