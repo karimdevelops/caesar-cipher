@@ -24,9 +24,9 @@ QPushButton:hover {
 }
 
 QPushButton#encryption_button {
-  /* color: #03045e; */
+  color: #4285F4;
 }
 
 QPushButton#decryption_button {
-  /* color: #ec5352; */
+  color: #ec5352;
 }
