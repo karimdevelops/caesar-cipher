@@ -1,5 +1,5 @@
 QMainWindow {
-  background-color: #1d1f22;
+  background-color: #110f19;
 }
 
 QLabel#heading {
@@ -15,7 +15,7 @@ QPushButton {
   font-size: 32px;
   font-family: Cubano;
   color: #fdfffd;
-  background-color: #1d1f22;
+  background-color: #110f19;
   border: 2px solid white;
 }
 
