@@ -5,26 +5,28 @@ QMainWindow {
 QLabel#heading {
   font-size: 75px;
   /* color: #fffefe; */
-  color: #00ee7c;
+  color: #31fe5c;
   font-weight: 800;
   font-family: RobotoMono
 }
 
 QPushButton {
   margin-bottom: 120px;
-  font-size: 30px;
-  font-family: Roboto;
-  color: white;
+  font-size: 32px;
+  font-family: Cubano;
+  color: #fdfffd;
+  background-color: #1d1f22;
+  border: 1px solid white;
 }
 
 QPushButton:hover {
-  border: 2px solid white;
+  border: 3px solid white;
 }
 
 QPushButton#encryption_button {
-  background-color: #03045e;
+  color: #4285F4;
 }
 
 QPushButton#decryption_button {
-  background-color: #9d0208;
+  color: #ec5352;
 }

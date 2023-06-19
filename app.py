@@ -39,8 +39,8 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
-        encryption_button.setFixedSize(160, 170)
-        decryption_button.setFixedSize(160, 170)
+        encryption_button.setFixedSize(190, 175)
+        decryption_button.setFixedSize(190, 175)
 
         page_layout.addWidget(heading)
         button_layout.addWidget(encryption_button)
@@ -90,6 +90,7 @@ QFontDatabase.addApplicationFont('font/Roboto_Mono/RobotoMono-Bold.ttf')
 QFontDatabase.addApplicationFont('font/Roboto/Roboto-Medium.ttf')
 QFontDatabase.addApplicationFont('font/Anonymous/AnonymousPro-Regular.ttf')
 QFontDatabase.addApplicationFont('font/Roboto_Condensed/RobotoCondensed-Regular.ttf')
+QFontDatabase.addApplicationFont('font/Cubano/Cubano/Cubano.ttf')
 
 app.setStyleSheet(Path('style.css').read_text())
 
