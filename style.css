@@ -16,11 +16,11 @@ QPushButton {
   font-family: Cubano;
   color: #fdfffd;
   background-color: #1d1f22;
-  border: 1px solid white;
+  border: 2px solid white;
 }
 
 QPushButton:hover {
-  border: 3px solid white;
+  border: 4px solid white;
 }
 
 QPushButton#encryption_button {
