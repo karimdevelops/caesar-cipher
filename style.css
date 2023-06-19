@@ -16,16 +16,17 @@ QPushButton {
   font-family: Cubano;
   color: white;
   background-color: #1d1f22;
+  border: 1px solid white;
 }
 
 QPushButton:hover {
-  border: 2px solid white;
+  border: 3px solid white;
 }
 
 QPushButton#encryption_button {
-  /* background-color: #03045e; */
+  /* color: #03045e; */
 }
 
 QPushButton#decryption_button {
-  /* background-color: #9d0208; */
+  /* color: #ec5352; */
 }
