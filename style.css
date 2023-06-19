@@ -15,6 +15,7 @@ QPushButton {
   font-size: 32px;
   font-family: Cubano;
   color: white;
+  background-color: #1d1f22;
 }
 
 QPushButton:hover {
@@ -22,9 +23,9 @@ QPushButton:hover {
 }
 
 QPushButton#encryption_button {
-  background-color: #03045e;
+  /* background-color: #03045e; */
 }
 
 QPushButton#decryption_button {
-  background-color: #9d0208;
+  /* background-color: #9d0208; */
 }
