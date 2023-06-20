@@ -77,36 +77,32 @@ class MainWindow(QMainWindow):
         decryption_button.released.connect(self.input_layout)
 
     def input_layout(self):
-        next_button = QPushButton("Next >")
-        next_button.setObjectName("next_button")
+        submit_button = QPushButton("Submit")
+        submit_button.setObjectName("next_button")
 
         back_button = QPushButton("< Back")
         back_button.setObjectName("back_button")
 
-        next_button.setFixedSize(145, 175)
+        submit_button.setFixedSize(145, 175)
         back_button.setFixedSize(145, 175)
 
         user_input = QTextEdit("")
         user_input.setObjectName("user_input")
         
         user_input.setPlaceholderText("Enter your text...")
-        user_input.setFixedSize(800, 100)
+        user_input.setFixedSize(800, 175)
 
-        page_layout = QVBoxLayout()
+        page_layout = QFormLayout()
         button_layout = QHBoxLayout()
         
-        page_layout.addWidget(user_input)
+        page_layout.addRow(user_input)
         button_layout.addWidget(back_button)
-        button_layout.addWidget(next_button)
+        button_layout.addWidget(submit_button)
 
-        page_layout.addLayout(button_layout)
-
-        # page_layout.setContentsMargins(25, 60, 0, 0)
+        page_layout.addRow(button_layout)
 
         self.widget = QWidget()
-
         self.widget.setLayout(page_layout)
-
         self.setCentralWidget(self.widget)
 
         back_button.clicked.connect(self.initUI)
