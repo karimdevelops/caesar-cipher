@@ -57,8 +57,8 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(decryption_button)
         footer_layout.addWidget(github_link)
 
-        page_layout.setContentsMargins(0, 125, 0, 0)   
-        button_layout.setContentsMargins(120, 65, 130, 0)
+        page_layout.setContentsMargins(0, 85, 0, 0)   
+        button_layout.setContentsMargins(120, 45, 140, 0)
         footer_layout.setContentsMargins(360, 0, 0, 30)
 
         page_layout.addLayout(button_layout)
@@ -74,7 +74,7 @@ class MainWindow(QMainWindow):
         continue_button = QPushButton("Continue")
         continue_button.setObjectName("continue_button")
 
-        continue_button.setFixedSize(160, 170)
+        continue_button.setFixedSize(245, 185)
 
         user_input = QTextEdit("")
         user_input.setObjectName("user_input")
