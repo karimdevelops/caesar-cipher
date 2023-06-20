@@ -4,7 +4,7 @@ QMainWindow {
 
 QLabel#heading {
   font-size: 103px;
-  letter-spacing: 12px;
+  letter-spacing: 0px;
   /* color: #fffefe; */
   color: #31fe5c;
   font-weight: 950;
