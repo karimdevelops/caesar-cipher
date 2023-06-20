@@ -23,7 +23,7 @@ class MainWindow(QMainWindow):
         self.setWindowTitle("Caesar Cipher")
         self.setWindowIcon(QIcon("img/logo.png"))
 
-        self.setFixedSize(850, 450)
+        self.setFixedSize(960, 540)
 
         widget = QWidget()
         page_layout = QVBoxLayout()
