@@ -103,7 +103,8 @@ QFontDatabase.addApplicationFont('font/Roboto_Mono/RobotoMono-Bold.ttf')
 QFontDatabase.addApplicationFont('font/Roboto/Roboto-Medium.ttf')
 QFontDatabase.addApplicationFont('font/Anonymous/AnonymousPro-Regular.ttf')
 QFontDatabase.addApplicationFont('font/Roboto_Condensed/RobotoCondensed-Regular.ttf')
-QFontDatabase.addApplicationFont('font/Cubano/Cubano/Cubano.ttf')
+QFontDatabase.addApplicationFont('font/Cubano/Cubano.ttf')
+QFontDatabase.addApplicationFont('font/MonomaniacOne/MonomaniacOne-Regular.ttf')
 
 app.setStyleSheet(Path('style.css').read_text())
 
