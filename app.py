@@ -11,7 +11,7 @@ from PyQt6.QtWidgets import (
     QVBoxLayout,
     QHBoxLayout
 )
-from PyQt6.QtGui import QIcon, QFontDatabase
+from PyQt6.QtGui import QIcon, QFontDatabase, QColor
 from PyQt6.QtCore import Qt
 
 
@@ -44,7 +44,9 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
-        github_link = QLabel("<a href='https://github.com/karimdevelops/caesar-cipher'>View Code</a>")
+        color = QColor("white")
+
+        github_link = QLabel(f"<a href='https://github.com/karimdevelops/caesar-cipher' style='color:{color.name()};text-decoration:none'>View Source Code </a>")
         github_link.setObjectName("github_link")
 
         encryption_button.setFixedSize(195, 175)
@@ -57,7 +59,7 @@ class MainWindow(QMainWindow):
 
         page_layout.setContentsMargins(0, 125, 0, 0)   
         button_layout.setContentsMargins(120, 65, 130, 0)
-        footer_layout.setContentsMargins(450, 0, 0, 0)
+        footer_layout.setContentsMargins(360, 0, 0, 30)
 
         page_layout.addLayout(button_layout)
         page_layout.addLayout(footer_layout)
