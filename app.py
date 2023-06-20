@@ -40,7 +40,8 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
-        github_link = QLabel("<a link='https://github.com/karimdevelops/caesar-cipher'>View Code</a>")
+        github_link = QLabel("<a href='https://github.com/karimdevelops/caesar-cipher'>View Code</a>")
+        github_link.setObjectName(github_link)
 
         encryption_button.setFixedSize(195, 175)
         decryption_button.setFixedSize(195, 175)
