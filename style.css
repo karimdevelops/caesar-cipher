@@ -4,7 +4,7 @@ QMainWindow {
 
 QLabel#heading {
   font-size: 90px;
-  letter-spacing: 10px;
+  letter-spacing: 12px;
   /* color: #fffefe; */
   color: #31fe5c;
   font-weight: 950;
@@ -18,7 +18,7 @@ QLabel#github_link {
 
 QPushButton {
   margin-bottom: 120px;
-  font-size: 32px;
+  font-size: 40px;
   font-family: Cubano;
   color: #fdfffd;
   background-color: #110f19;

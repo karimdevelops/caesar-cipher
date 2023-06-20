@@ -49,8 +49,8 @@ class MainWindow(QMainWindow):
         github_link = QLabel(f"<a href='https://github.com/karimdevelops/caesar-cipher' style='color:{color.name()};text-decoration:none'>View Source Code </a>")
         github_link.setObjectName("github_link")
 
-        encryption_button.setFixedSize(195, 175)
-        decryption_button.setFixedSize(195, 175)
+        encryption_button.setFixedSize(245, 185)
+        decryption_button.setFixedSize(245, 185)
 
         page_layout.addWidget(heading)
         button_layout.addWidget(encryption_button)
