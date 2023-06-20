@@ -28,6 +28,7 @@ class MainWindow(QMainWindow):
         widget = QWidget()
         page_layout = QVBoxLayout()
         button_layout = QHBoxLayout()
+        footer_layout = QVBoxLayout()
 
         heading = QLabel("Caesar Cipher")
         heading.setObjectName("heading")
@@ -39,17 +40,21 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
+        github_link = QLabel("<a link='https://github.com/karimdevelops/caesar-cipher'>View Code</a>")
+
         encryption_button.setFixedSize(195, 175)
         decryption_button.setFixedSize(195, 175)
 
         page_layout.addWidget(heading)
         button_layout.addWidget(encryption_button)
         button_layout.addWidget(decryption_button)
+        footer_layout.addWidget(github_link)
 
         page_layout.setContentsMargins(0, 60, 0, 0)
         button_layout.setContentsMargins(110, 0, 130, 30)
 
         page_layout.addLayout(button_layout)
+        page_layout.addLayout(footer_layout)
         widget.setLayout(page_layout)
 
         self.setCentralWidget(widget)
