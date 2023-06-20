@@ -9,9 +9,14 @@ from PyQt6.QtWidgets import (
     QLineEdit, 
     QTextEdit,
     QVBoxLayout,
-    QHBoxLayout
+    QHBoxLayout,
+    QFormLayout
 )
-from PyQt6.QtGui import QIcon, QFontDatabase, QColor
+from PyQt6.QtGui import (
+    QIcon, 
+    QFontDatabase, 
+    QColor
+)
 from PyQt6.QtCore import Qt
 
 
@@ -48,7 +53,6 @@ class MainWindow(QMainWindow):
 
         github_link = QLabel(f"<a href='https://github.com/karimdevelops/caesar-cipher' style='color:{color.name()};'>View Source Code</a>")
         github_link.setOpenExternalLinks(True)
-        
         github_link.setObjectName("github_link")
 
         encryption_button.setFixedSize(245, 185)
@@ -61,7 +65,7 @@ class MainWindow(QMainWindow):
 
         page_layout.setContentsMargins(0, 85, 0, 0)   
         button_layout.setContentsMargins(120, 45, 140, 0)
-        footer_layout.setContentsMargins(360, 0, 0, 30)
+        footer_layout.setContentsMargins(360, 0, 0, 50)
 
         page_layout.addLayout(button_layout)
         page_layout.addLayout(footer_layout)
@@ -73,10 +77,14 @@ class MainWindow(QMainWindow):
         decryption_button.released.connect(self.input_layout)
 
     def input_layout(self):
-        continue_button = QPushButton("Continue")
-        continue_button.setObjectName("continue_button")
+        next_button = QPushButton("Next >")
+        next_button.setObjectName("next_button")
 
-        continue_button.setFixedSize(245, 185)
+        back_button = QPushButton("< Back")
+        back_button.setObjectName("back_button")
+
+        next_button.setFixedSize(145, 175)
+        back_button.setFixedSize(145, 175)
 
         user_input = QTextEdit("")
         user_input.setObjectName("user_input")
@@ -84,20 +92,24 @@ class MainWindow(QMainWindow):
         user_input.setPlaceholderText("Enter your text...")
         user_input.setFixedSize(800, 100)
 
-        layout = QVBoxLayout()
+        page_layout = QVBoxLayout()
+        button_layout = QHBoxLayout()
         
-        layout.addWidget(user_input)
-        layout.addWidget(continue_button)
+        page_layout.addWidget(user_input)
+        button_layout.addWidget(back_button)
+        button_layout.addWidget(next_button)
 
-        layout.setContentsMargins(25, 60, 0, 0)
+        page_layout.addLayout(button_layout)
+
+        # page_layout.setContentsMargins(25, 60, 0, 0)
 
         self.widget = QWidget()
 
-        self.widget.setLayout(layout)
+        self.widget.setLayout(page_layout)
 
         self.setCentralWidget(self.widget)
 
-        # continue_button.released.connect()
+        back_button.clicked.connect(self.initUI)
 
 app = QApplication([])
 

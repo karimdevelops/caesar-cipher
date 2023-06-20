@@ -18,7 +18,7 @@ QLabel#github_link {
 
 QPushButton {
   margin-bottom: 120px;
-  font-size: 40px;
+  font-size: 30px;
   font-family: Cubano;
   color: #fdfffd;
   background-color: #110f19;
@@ -31,8 +31,10 @@ QPushButton:hover {
 
 QPushButton#encryption_button {
   color: #4285F4;
+  font-size: 40px;
 }
 
 QPushButton#decryption_button {
   color: #ec5352;
+  font-size: 40px;
 }
