@@ -14,11 +14,13 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtGui import (
     QIcon, 
-    QFontDatabase
+    QFontDatabase,
+    QPixmap
 )
 from PyQt6.QtCore import Qt
 
 from hyperlink import HyperLink
+
 
 class MainWindow(QMainWindow):
 
@@ -31,6 +33,7 @@ class MainWindow(QMainWindow):
         self.setFixedSize(960, 540)
 
         self.initUI()
+
 
     def initUI(self):
 
@@ -62,7 +65,7 @@ class MainWindow(QMainWindow):
 
         page_layout.setContentsMargins(0, 85, 0, 0)   
         button_layout.setContentsMargins(130, 45, 140, 0)
-        footer_layout.setContentsMargins(360, 0, 0, 50)
+        footer_layout.setContentsMargins(0, 0, 0, 40)
 
         page_layout.addLayout(button_layout)
         page_layout.addLayout(footer_layout)
@@ -72,6 +75,7 @@ class MainWindow(QMainWindow):
 
         encryption_button.clicked.connect(self.inputUI)
         decryption_button.clicked.connect(self.inputUI)
+
 
     def inputUI(self):
         submit_button = QPushButton("Submit")
@@ -106,6 +110,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
         back_button.clicked.connect(self.initUI)
+
 
 app = QApplication([])
 
