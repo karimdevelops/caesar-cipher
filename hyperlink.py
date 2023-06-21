@@ -33,7 +33,7 @@ class HyperLink(QWidget):
         self.layout.addWidget(self.img_label)
         self.layout.addWidget(self.label)
 
-        self.layout.setContentsMargins(340, 0, 396, 0)
+        self.layout.setContentsMargins(282, 0, 335, 0)
 
         self.setLayout(self.layout)
 

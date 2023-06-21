@@ -52,7 +52,7 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
-        github_link = HyperLink('View Source Code')
+        github_link = HyperLink('View Source Code on Github')
         github_link.setObjectName("github_link")
 
         encryption_button.setFixedSize(245, 185)
