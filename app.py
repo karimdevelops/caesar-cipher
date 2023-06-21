@@ -14,11 +14,11 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtGui import (
     QIcon, 
-    QFontDatabase, 
-    QColor
+    QFontDatabase
 )
 from PyQt6.QtCore import Qt
 
+from hyperlink import HyperLink
 
 class MainWindow(QMainWindow):
 
@@ -49,10 +49,7 @@ class MainWindow(QMainWindow):
         decryption_button = QPushButton("Decryption")
         decryption_button.setObjectName("decryption_button")
 
-        color = QColor("white")
-
-        github_link = QLabel(f"<a href='https://github.com/karimdevelops/caesar-cipher' style='color:{color.name()};'>View Source Code</a>")
-        github_link.setOpenExternalLinks(True)
+        github_link = HyperLink('View Source Code')
         github_link.setObjectName("github_link")
 
         encryption_button.setFixedSize(245, 185)
