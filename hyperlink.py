@@ -1,6 +1,6 @@
 from PyQt6 import QtCore, QtGui
 from PyQt6.QtWidgets import QLabel, QHBoxLayout, QWidget
-from PyQt6.QtGui import QPixmap
+from PyQt6.QtGui import QPixmap, QFontDatabase
 
 
 class HyperLink(QWidget):
@@ -17,6 +17,11 @@ class HyperLink(QWidget):
         self.label.setOpenExternalLinks(True)
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
 
+        QFontDatabase.addApplicationFont('font/Roboto_Mono/RobotoMono-Bold.ttf')
+        self.label.setStyleSheet(
+            "font-size: 20px;"
+        )
+
         pixmap = QPixmap("img/github_logo_small.png")
         self.img_label = QLabel()
         self.img_label.setPixmap(pixmap)
@@ -27,7 +32,7 @@ class HyperLink(QWidget):
         self.layout.addWidget(self.img_label)
         self.layout.addWidget(self.label)
 
-        self.layout.setContentsMargins(370, 0, 435, 0)
+        self.layout.setContentsMargins(340, 0, 396, 0)
 
         self.setLayout(self.layout)
 

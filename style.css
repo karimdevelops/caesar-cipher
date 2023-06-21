@@ -11,11 +11,6 @@ QLabel#heading {
   font-family: MonomaniacOne;
 }
 
-QLabel#github_link {
-  font-size: 25px;
-  font-family: RobotoMono;
-}
-
 QPushButton {
   margin-bottom: 120px;
   font-size: 30px;
