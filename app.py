@@ -73,10 +73,10 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(widget)
 
-        encryption_button.released.connect(self.input_layout)
-        decryption_button.released.connect(self.input_layout)
+        encryption_button.clicked.connect(self.inputUI)
+        decryption_button.clicked.connect(self.inputUI)
 
-    def input_layout(self):
+    def inputUI(self):
         submit_button = QPushButton("Submit")
         submit_button.setObjectName("next_button")
 
@@ -98,6 +98,9 @@ class MainWindow(QMainWindow):
         page_layout.addRow(user_input)
         button_layout.addWidget(back_button)
         button_layout.addWidget(submit_button)
+
+        button_layout.setContentsMargins(20, 270, 0, 20)
+        button_layout.setSpacing(610)
 
         page_layout.addRow(button_layout)
 
