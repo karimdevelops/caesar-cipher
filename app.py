@@ -64,7 +64,7 @@ class MainWindow(QMainWindow):
         footer_layout.addWidget(github_link)
 
         page_layout.setContentsMargins(0, 85, 0, 0)   
-        button_layout.setContentsMargins(120, 45, 140, 0)
+        button_layout.setContentsMargins(130, 45, 140, 0)
         footer_layout.setContentsMargins(360, 0, 0, 50)
 
         page_layout.addLayout(button_layout)
