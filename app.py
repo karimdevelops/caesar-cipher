@@ -111,19 +111,20 @@ class MainWindow(QMainWindow):
 
         back_button.clicked.connect(self.initUI)
 
+if __name__ == '__main__':
 
-app = QApplication([])
+    app = QApplication([])
 
-QFontDatabase.addApplicationFont('font/Roboto_Mono/RobotoMono-Bold.ttf')
-QFontDatabase.addApplicationFont('font/Roboto/Roboto-Medium.ttf')
-QFontDatabase.addApplicationFont('font/Anonymous/AnonymousPro-Regular.ttf')
-QFontDatabase.addApplicationFont('font/Roboto_Condensed/RobotoCondensed-Regular.ttf')
-QFontDatabase.addApplicationFont('font/Cubano/Cubano.ttf')
-QFontDatabase.addApplicationFont('font/MonomaniacOne/MonomaniacOne-Regular.ttf')
+    QFontDatabase.addApplicationFont(Path('font/Roboto_Mono/RobotoMono-Bold.ttf'))
+    QFontDatabase.addApplicationFont(Path('font/Roboto/Roboto-Medium.ttf'))
+    QFontDatabase.addApplicationFont(Path('font/Anonymous/AnonymousPro-Regular.ttf'))
+    QFontDatabase.addApplicationFont(Path('font/Roboto_Condensed/RobotoCondensed-Regular.ttf'))
+    QFontDatabase.addApplicationFont(Path('font/Cubano/Cubano.ttf'))
+    QFontDatabase.addApplicationFont(Path('font/MonomaniacOne/MonomaniacOne-Regular.ttf'))
 
-app.setStyleSheet(Path('style.css').read_text())
+    app.setStyleSheet(Path('style.css').read_text())
 
-window = MainWindow()
-window.show()
+    window = MainWindow()
+    window.show()
 
-app.exec()
+    app.exec()
