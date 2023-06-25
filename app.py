@@ -115,12 +115,12 @@ if __name__ == '__main__':
 
     app = QApplication([])
 
-    QFontDatabase.addApplicationFont(Path('font/Roboto_Mono/RobotoMono-Bold.ttf'))
-    QFontDatabase.addApplicationFont(Path('font/Roboto/Roboto-Medium.ttf'))
-    QFontDatabase.addApplicationFont(Path('font/Anonymous/AnonymousPro-Regular.ttf'))
-    QFontDatabase.addApplicationFont(Path('font/Roboto_Condensed/RobotoCondensed-Regular.ttf'))
-    QFontDatabase.addApplicationFont(Path('font/Cubano/Cubano.ttf'))
-    QFontDatabase.addApplicationFont(Path('font/MonomaniacOne/MonomaniacOne-Regular.ttf'))
+    QFontDatabase.addApplicationFont(str(Path('font/Roboto_Mono/RobotoMono-Bold.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/Roboto/Roboto-Medium.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/Anonymous/AnonymousPro-Regular.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/Roboto_Condensed/RobotoCondensed-Regu)lar.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/Cubano/Cubano.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/MonomaniacOne/MonomaniacOne-Regular.ttf')))
 
     app.setStyleSheet(Path('style.css').read_text())
 
