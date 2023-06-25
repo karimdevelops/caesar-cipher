@@ -39,7 +39,7 @@ class MainWindow(QMainWindow):
     def initUI(self):
 
         self.button_w = 245
-        self.button_h = 85
+        self.button_h = 71
 
         widget = QWidget()
         page_layout = QVBoxLayout()

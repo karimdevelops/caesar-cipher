@@ -13,14 +13,14 @@ class Button(QWidget):
     def __init__(self, text, w, h, hover_bool):
         super().__init__()
 
-        self.setFixedSize(280, 105)
-
         self.hover_bool = hover_bool
 
         self.default_w = w
         self.default_h = h
-        self.hover_w = 270
-        self.hover_h = 95
+        self.hover_w = self.default_w + 25
+        self.hover_h = self.default_h + 15
+
+        self.setFixedSize(self.hover_w + 10, self.hover_h + 10)
 
         self.button = QPushButton(text)
         self.button.setObjectName("button")
