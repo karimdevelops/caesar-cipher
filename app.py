@@ -20,6 +20,7 @@ from PyQt6.QtGui import (
 from PyQt6.QtCore import Qt
 
 from hyperlink import HyperLink
+from button import Button
 
 
 class MainWindow(QMainWindow):
@@ -46,26 +47,23 @@ class MainWindow(QMainWindow):
         heading.setObjectName("heading")
         heading.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        encryption_button = QPushButton("Encryption")
-        encryption_button.setObjectName("encryption_button")
+        encryption_button = Button("Encryption", True)
+        encryption_button.setStyleSheet("color: #4285F4")
 
-        decryption_button = QPushButton("Decryption")
-        decryption_button.setObjectName("decryption_button")
+        decryption_button = Button("Decryption", True)
+        decryption_button.setStyleSheet("color: #ec5352")
 
         github_link = HyperLink('View Source Code on Github')
         github_link.setObjectName("github_link")
-
-        encryption_button.setFixedSize(245, 185)
-        decryption_button.setFixedSize(245, 185)
 
         page_layout.addWidget(heading)
         button_layout.addWidget(encryption_button)
         button_layout.addWidget(decryption_button)
         footer_layout.addWidget(github_link)
 
-        page_layout.setContentsMargins(0, 85, 0, 0)   
-        button_layout.setContentsMargins(130, 45, 140, 0)
-        footer_layout.setContentsMargins(0, 0, 0, 40)
+        # page_layout.setContentsMargins(0, 85, 0, 0)   
+        # button_layout.setContentsMargins(130, 45, 140, 0)
+        # footer_layout.setContentsMargins(0, 0, 0, 40)
 
         page_layout.addLayout(button_layout)
         page_layout.addLayout(footer_layout)
@@ -73,8 +71,8 @@ class MainWindow(QMainWindow):
 
         self.setCentralWidget(widget)
 
-        encryption_button.clicked.connect(self.inputUI)
-        decryption_button.clicked.connect(self.inputUI)
+        encryption_button.button.clicked.connect(self.inputUI)
+        decryption_button.button.clicked.connect(self.inputUI)
 
 
     def inputUI(self):

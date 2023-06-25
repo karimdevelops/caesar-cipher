@@ -12,7 +12,6 @@ QLabel#heading {
 }
 
 QPushButton {
-  margin-bottom: 120px;
   font-size: 30px;
   font-family: Cubano;
   color: #fdfffd;
@@ -20,16 +19,10 @@ QPushButton {
   border: 2px solid white;
 }
 
+QPushButton#button {
+  font-size: 40px;
+}
+
 QPushButton:hover {
   border: 5px solid white;
-}
-
-QPushButton#encryption_button {
-  color: #4285F4;
-  font-size: 40px;
-}
-
-QPushButton#decryption_button {
-  color: #ec5352;
-  font-size: 40px;
 }
