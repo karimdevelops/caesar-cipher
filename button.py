@@ -23,7 +23,8 @@ class Button(QWidget):
         self.setFixedSize(self.hover_w + 10, self.hover_h + 10)
 
         self.button = QPushButton(text)
-        self.button.setObjectName("button")
+        if self.hover_bool == True:
+            self.button.setObjectName("button")
         self.button.setFixedSize(self.default_w, self.default_h)
 
         self.layout = QHBoxLayout()
@@ -38,5 +39,6 @@ class Button(QWidget):
             self.button.setStyleSheet("font-size: 45px")
 
     def leaveEvent(self, QEvent):
-        self.button.setFixedSize(self.default_w, self.default_h)
-        self.button.setStyleSheet("font-size: 40px")
+        if self.hover_bool == True:
+            self.button.setFixedSize(self.default_w, self.default_h)
+            self.button.setStyleSheet(f"font-size: 40px")
