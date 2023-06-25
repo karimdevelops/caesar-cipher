@@ -26,3 +26,7 @@ QPushButton#button {
 QPushButton:hover {
   border: 5px solid white;
 }
+
+QPushButton:focus {
+  outline: none;
+}
