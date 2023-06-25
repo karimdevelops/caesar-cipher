@@ -7,6 +7,8 @@ class HyperLink(QWidget):
     def __init__(self, text):
         super().__init__()
 
+        self.setFixedSize(362, 50)
+
         self.text = text
         self.link = "<a href='https://github.com/karimdevelops/caesar-cipher' style='color:#31fe5c; text-decoration: {};'>{}</a>"
 
@@ -33,7 +35,7 @@ class HyperLink(QWidget):
         self.layout.addWidget(self.img_label)
         self.layout.addWidget(self.label)
 
-        self.layout.setContentsMargins(282, 0, 335, 0)
+        # self.layout.setContentsMargins(282, 0, 335, 0)
 
         self.setLayout(self.layout)
 
