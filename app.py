@@ -38,6 +38,9 @@ class MainWindow(QMainWindow):
 
     def initUI(self):
 
+        self.button_w = 245
+        self.button_h = 85
+
         widget = QWidget()
         page_layout = QVBoxLayout()
         button_layout = QHBoxLayout()
@@ -47,10 +50,10 @@ class MainWindow(QMainWindow):
         heading.setObjectName("heading")
         heading.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        encryption_button = Button("Encryption", True)
+        encryption_button = Button("Encryption", self.button_w, self.button_h, True)
         encryption_button.setStyleSheet("color: #4285F4")
 
-        decryption_button = Button("Decryption", True)
+        decryption_button = Button("Decryption", self.button_w, self.button_h, True)
         decryption_button.setStyleSheet("color: #ec5352")
 
         github_link = HyperLink('View Source Code on Github')
@@ -76,14 +79,14 @@ class MainWindow(QMainWindow):
 
 
     def inputUI(self):
-        submit_button = QPushButton("Submit")
+        self.button_w = 155
+        self. button_h = 70
+
+        submit_button = Button("Submit", self.button_w, self.button_h, False)
         submit_button.setObjectName("next_button")
 
-        back_button = QPushButton("< Back")
+        back_button = Button("< Back", self.button_w, self.button_h, False)
         back_button.setObjectName("back_button")
-
-        submit_button.setFixedSize(145, 175)
-        back_button.setFixedSize(145, 175)
 
         user_input = QTextEdit("")
         user_input.setObjectName("user_input")
@@ -98,8 +101,8 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(back_button)
         button_layout.addWidget(submit_button)
 
-        button_layout.setContentsMargins(20, 270, 0, 20)
-        button_layout.setSpacing(610)
+        button_layout.setContentsMargins(0, 245, 0, 0)
+        button_layout.setSpacing(480)
 
         page_layout.addRow(button_layout)
 
@@ -107,7 +110,7 @@ class MainWindow(QMainWindow):
         self.widget.setLayout(page_layout)
         self.setCentralWidget(self.widget)
 
-        back_button.clicked.connect(self.initUI)
+        back_button.button.clicked.connect(self.initUI)
 
 if __name__ == '__main__':
 
