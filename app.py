@@ -61,9 +61,9 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(decryption_button)
         footer_layout.addWidget(github_link)
 
-        # page_layout.setContentsMargins(0, 85, 0, 0)   
-        # button_layout.setContentsMargins(130, 45, 140, 0)
-        # footer_layout.setContentsMargins(0, 0, 0, 40)
+        page_layout.setContentsMargins(0, 40, 0, 0)   
+        button_layout.setContentsMargins(130, 0, 140, 100)
+        footer_layout.setContentsMargins(280, 0, 0, 40)
 
         page_layout.addLayout(button_layout)
         page_layout.addLayout(footer_layout)
