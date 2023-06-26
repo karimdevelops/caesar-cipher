@@ -83,10 +83,9 @@ class MainWindow(QMainWindow):
         self. button_h = 70
 
         submit_button = Button("Submit", self.button_w, self.button_h, False)
-        submit_button.setObjectName("next_button")
 
         back_button = Button("< Back", self.button_w, self.button_h, False)
-        back_button.setObjectName("back_button")
+
 
         user_input = QTextEdit("")
         user_input.setObjectName("user_input")
@@ -98,11 +97,10 @@ class MainWindow(QMainWindow):
         button_layout = QHBoxLayout()
         
         page_layout.addRow(user_input)
-        button_layout.addWidget(back_button)
-        button_layout.addWidget(submit_button)
+        button_layout.addWidget(back_button, alignment=Qt.AlignmentFlag.AlignLeft)
+        button_layout.addWidget(submit_button, alignment=Qt.AlignmentFlag.AlignRight)
 
         button_layout.setContentsMargins(0, 245, 0, 0)
-        button_layout.setSpacing(480)
 
         page_layout.addRow(button_layout)
 
