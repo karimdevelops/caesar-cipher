@@ -36,7 +36,7 @@ class Button(QWidget):
     def enterEvent(self, QEnterEven):
         if self.hover_bool == True:
             self.button.setFixedSize(self.hover_w, self.hover_h)
-            self.button.setStyleSheet("font-size: 45px")
+            self.button.setStyleSheet("font-size: 49px")
 
     def leaveEvent(self, QEvent):
         if self.hover_bool == True:
