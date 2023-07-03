@@ -30,3 +30,7 @@ QPushButton:hover {
 QPushButton:focus {
   outline: none;
 }
+
+QTextEdit#user_input {
+  background-color: #1e2124;
+}
