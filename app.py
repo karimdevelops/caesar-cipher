@@ -98,6 +98,7 @@ class MainWindow(QMainWindow):
         user_input.setFixedSize(800, 175)
 
         shift_num = QLineEdit("")
+        shift_num.setFixedSize(50, 22)
 
         page_layout = QFormLayout()
         button_layout = QHBoxLayout()
