@@ -86,10 +86,13 @@ class MainWindow(QMainWindow):
 
         back_button = Button("< Back", self.button_w, self.button_h, False)
 
-
         user_input = QTextEdit("")
-        user_input.setObjectName("user_input")
-        
+
+        if self.sender().text() == 'Encryption':
+            user_input.setObjectName("encryption")
+        elif self.sender().text() == 'Decryption':
+            user_input.setObjectName("decryption")
+
         user_input.setPlaceholderText("Enter your text...")
         user_input.setFixedSize(800, 175)
 

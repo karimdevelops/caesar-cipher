@@ -31,7 +31,15 @@ QPushButton:focus {
   outline: none;
 }
 
-QTextEdit#user_input {
+QTextEdit {
   background-color: #1e2124;
   color: #fefffe;
+}
+
+QTextEdit#encryption {
+  selection-background-color: #ec5352;
+}
+
+QTextEdit#decryption {
+  selection-background-color: #4285F4;
 }
