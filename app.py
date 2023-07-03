@@ -97,10 +97,13 @@ class MainWindow(QMainWindow):
         user_input.setPlaceholderText("Enter your text...")
         user_input.setFixedSize(800, 175)
 
+        shift_num = QLineEdit("")
+
         page_layout = QFormLayout()
         button_layout = QHBoxLayout()
         
         page_layout.addRow(user_input)
+        page_layout.addRow(shift_num)
         button_layout.addWidget(back_button, alignment=Qt.AlignmentFlag.AlignLeft)
         button_layout.addWidget(submit_button, alignment=Qt.AlignmentFlag.AlignRight)
 
