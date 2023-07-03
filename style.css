@@ -33,4 +33,5 @@ QPushButton:focus {
 
 QTextEdit#user_input {
   background-color: #1e2124;
+  color: #fefffe;
 }
