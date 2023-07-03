@@ -8,12 +8,12 @@ QLabel#heading {
   /* color: #fffefe; */
   color: #31fe5c;
   font-weight: 950;
-  font-family: MonomaniacOne;
+  font-family: MonomaniacOne, sans-serif;
 }
 
 QPushButton {
   font-size: 25px;
-  font-family: Cubano;
+  font-family: Cubano, sans-serif;
   color: #fdfffd;
   background-color: #110f19;
   border: 2px solid white;
@@ -34,6 +34,7 @@ QPushButton:focus {
 QTextEdit {
   background-color: #1e2124;
   color: #fefffe;
+  font-size: 16px;
 }
 
 QTextEdit#encryption {
