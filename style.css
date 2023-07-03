@@ -41,7 +41,13 @@ QTextEdit {
 QTextEdit#encryption {
   selection-background-color: #ec5352;
 }
+QTextEdit#encryption:focus {
+  border: 1px solid #4285F4;
+}
 
 QTextEdit#decryption {
   selection-background-color: #4285F4;
+}
+QTextEdit#decryption:focus {
+  border: 1px solid #ec5352;
 }
