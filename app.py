@@ -87,6 +87,7 @@ class MainWindow(QMainWindow):
         back_button = Button("< Back", self.button_w, self.button_h, False)
 
         user_input = QTextEdit("")
+        user_input.setAcceptRichText(False)
 
         if self.sender().text() == 'Encryption':
             user_input.setObjectName("encryption")
@@ -120,7 +121,7 @@ if __name__ == '__main__':
     QFontDatabase.addApplicationFont(str(Path('font/Roboto_Mono/RobotoMono-Bold.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/Roboto/Roboto-Medium.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/Anonymous/AnonymousPro-Regular.ttf')))
-    QFontDatabase.addApplicationFont(str(Path('font/Roboto_Condensed/RobotoCondensed-Regu)lar.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/Roboto_Condensed/RobotoCondensed-Regular.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/Cubano/Cubano.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/MonomaniacOne/MonomaniacOne-Regular.ttf')))
 
