@@ -17,8 +17,8 @@ class Button(QWidget):
 
         self.default_w = w
         self.default_h = h
-        self.hover_w = self.default_w + 25
-        self.hover_h = self.default_h + 15
+        self.hover_w = self.default_w + 45
+        self.hover_h = self.default_h + 25
 
         self.setFixedSize(self.hover_w + 10, self.hover_h + 10)
 
