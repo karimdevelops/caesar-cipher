@@ -35,6 +35,7 @@ QTextEdit {
   background-color: #1e2124;
   color: #fefffe;
   font-size: 16px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 QTextEdit#encryption {
