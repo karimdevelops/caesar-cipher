@@ -102,7 +102,7 @@ class MainWindow(QMainWindow):
 
         input_prompt = QLabel("Message:")
         input_prompt.setObjectName('prompt')
-        shift_prompt = QLabel("Shift number:")
+        shift_prompt = QLabel("Shift number (1-20):")
         shift_prompt.setObjectName('prompt')
 
         page_layout = QFormLayout()
