@@ -13,6 +13,7 @@ QLabel#heading {
 
 QLabel#prompt {
   font-size: 22px;
+  font-family: "Roboto Condensed";
 }
 
 QPushButton {
