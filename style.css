@@ -39,6 +39,10 @@ QLineEdit {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
+QLineEdit:focus {
+  border: 1px solid #31fe5c;
+}
+
 QTextEdit#encryption {
   selection-background-color: #ec5352;
 }
