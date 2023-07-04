@@ -100,10 +100,13 @@ class MainWindow(QMainWindow):
         shift_num = QLineEdit("")
         shift_num.setFixedSize(50, 22)
 
+        input_prompt = QLabel("Message:")
+
         page_layout = QFormLayout()
         button_layout = QHBoxLayout()
         
-        page_layout.addRow(user_input)
+        page_layout.addWidget(input_prompt)
+        page_layout.addWidget(user_input)
         page_layout.addRow(shift_num)
         button_layout.addWidget(back_button, alignment=Qt.AlignmentFlag.AlignLeft)
         button_layout.addWidget(submit_button, alignment=Qt.AlignmentFlag.AlignRight)
