@@ -106,17 +106,24 @@ class MainWindow(QMainWindow):
         shift_prompt.setObjectName('prompt')
 
         page_layout = QFormLayout()
+        text_layout = QVBoxLayout()
+        shift_num_layout = QVBoxLayout()
         button_layout = QHBoxLayout()
         
-        page_layout.addWidget(input_prompt)
-        page_layout.addWidget(user_input)
-        page_layout.addWidget(shift_prompt)
-        page_layout.addWidget(shift_num)
+        text_layout.addWidget(input_prompt)
+        text_layout.addWidget(user_input)
+        shift_num_layout.addWidget(shift_prompt)
+        shift_num_layout.addWidget(shift_num)
         button_layout.addWidget(back_button, alignment=Qt.AlignmentFlag.AlignLeft)
         button_layout.addWidget(submit_button, alignment=Qt.AlignmentFlag.AlignRight)
 
-        button_layout.setContentsMargins(0, 245, 0, 0)
+        text_layout.setContentsMargins(50, 0, 0, 40)
+        shift_num_layout.setContentsMargins(50, 0, 0, 10)
+        page_layout.setContentsMargins(0, 70, 0, 0)
+        button_layout.setContentsMargins(0, 50, 0, 0)
 
+        page_layout.addRow(text_layout)
+        page_layout.addRow(shift_num_layout)
         page_layout.addRow(button_layout)
 
         self.widget = QWidget()
