@@ -31,7 +31,8 @@ QPushButton:focus {
   outline: none;
 }
 
-QTextEdit {
+QTextEdit,
+QLineEdit {
   background-color: #1e2124;
   color: #fefffe;
   font-size: 16px;
