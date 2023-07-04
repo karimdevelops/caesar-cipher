@@ -101,13 +101,15 @@ class MainWindow(QMainWindow):
         shift_num.setFixedSize(50, 22)
 
         input_prompt = QLabel("Message:")
+        shift_prompt = QLabel("Shift number:")
 
         page_layout = QFormLayout()
         button_layout = QHBoxLayout()
         
         page_layout.addWidget(input_prompt)
         page_layout.addWidget(user_input)
-        page_layout.addRow(shift_num)
+        page_layout.addWidget(shift_prompt)
+        page_layout.addWidget(shift_num)
         button_layout.addWidget(back_button, alignment=Qt.AlignmentFlag.AlignLeft)
         button_layout.addWidget(submit_button, alignment=Qt.AlignmentFlag.AlignRight)
 
