@@ -22,7 +22,7 @@ class HyperLink(QWidget):
         QFontDatabase.addApplicationFont('font/Roboto_Mono/RobotoMono-Bold.ttf')
         self.label.setStyleSheet(
             "font-size: 20px;"
-            "font-family: RobotoMono"
+            "font-family: Roboto Mono"
         )
 
         pixmap = QPixmap("img/github_logo_small.png")

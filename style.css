@@ -8,7 +8,7 @@ QLabel#heading {
   /* color: #fffefe; */
   color: #31fe5c;
   font-weight: 950;
-  font-family: MonomaniacOne, sans-serif;
+  font-family: "Monomaniac One", sans-serif;
 }
 
 QLabel#prompt {
