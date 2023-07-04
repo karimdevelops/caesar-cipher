@@ -11,6 +11,10 @@ QLabel#heading {
   font-family: MonomaniacOne, sans-serif;
 }
 
+QLabel#prompt {
+  font-size: 22px;
+}
+
 QPushButton {
   font-size: 25px;
   font-family: Cubano, sans-serif;

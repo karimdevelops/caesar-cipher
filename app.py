@@ -101,7 +101,9 @@ class MainWindow(QMainWindow):
         shift_num.setFixedSize(50, 22)
 
         input_prompt = QLabel("Message:")
+        input_prompt.setObjectName('prompt')
         shift_prompt = QLabel("Shift number:")
+        shift_prompt.setObjectName('prompt')
 
         page_layout = QFormLayout()
         button_layout = QHBoxLayout()
