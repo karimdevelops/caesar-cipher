@@ -63,3 +63,7 @@ QTextEdit#decryption {
 QTextEdit#decryption:focus {
   border: 1px solid #ec5352;
 }
+
+QScrollBar {
+  background-color: #121416;
+}
