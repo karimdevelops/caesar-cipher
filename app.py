@@ -22,6 +22,7 @@ from PyQt6.QtCore import Qt
 from hyperlink import HyperLink
 from button import Button
 
+from caesar_cipher import caesar_cipher
 
 class MainWindow(QMainWindow):
 
@@ -86,19 +87,21 @@ class MainWindow(QMainWindow):
 
         back_button = Button("< Back", self.button_w, self.button_h, False)
 
-        user_input = QTextEdit("")
-        user_input.setAcceptRichText(False)
+        self.user_input = QTextEdit("")
+        self.user_input.setAcceptRichText(False)
 
-        if self.sender().text() == 'Encryption':
-            user_input.setObjectName("encryption")
-        elif self.sender().text() == 'Decryption':
-            user_input.setObjectName("decryption")
+        self.mode = self.sender().text()
 
-        user_input.setPlaceholderText("Enter your text...")
-        user_input.setFixedSize(800, 175)
+        if  self.mode == 'Encryption':
+            self.user_input.setObjectName("encryption")
+        elif self.mode == 'Decryption':
+            self.user_input.setObjectName("decryption")
 
-        shift_num = QLineEdit("")
-        shift_num.setFixedSize(50, 22)
+        self.user_input.setPlaceholderText("Enter your text...")
+        self.user_input.setFixedSize(800, 175)
+
+        self.shift_num = QLineEdit("")
+        self.shift_num.setFixedSize(50, 22)
 
         input_prompt = QLabel("Message:")
         input_prompt.setObjectName('prompt')
@@ -111,9 +114,9 @@ class MainWindow(QMainWindow):
         button_layout = QHBoxLayout()
         
         text_layout.addWidget(input_prompt)
-        text_layout.addWidget(user_input)
+        text_layout.addWidget(self.user_input)
         shift_num_layout.addWidget(shift_prompt)
-        shift_num_layout.addWidget(shift_num)
+        shift_num_layout.addWidget(self.shift_num)
         button_layout.addWidget(back_button, alignment=Qt.AlignmentFlag.AlignLeft)
         button_layout.addWidget(submit_button, alignment=Qt.AlignmentFlag.AlignRight)
 
@@ -131,6 +134,16 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
         back_button.button.clicked.connect(self.initUI)
+        submit_button.button.clicked.connect(self.cipher)
+
+    def cipher(self):
+        msg = self.user_input.toPlainText()
+        shift_num = int(self.shift_num.text())
+        mode = self.mode
+
+        cryp_text = caesar_cipher(msg, shift_num, mode)
+        print(cryp_text)
+
 
 if __name__ == '__main__':
 
