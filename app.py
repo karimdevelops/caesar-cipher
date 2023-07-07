@@ -142,7 +142,9 @@ class MainWindow(QMainWindow):
         shift_num = int(self.shift_num.text())
         mode = self.mode
 
-        cipher_text = QLabel(caesar_cipher(msg, shift_num, mode))
+        cipher_text = QTextEdit(caesar_cipher(msg, shift_num, mode))
+        cipher_text.setReadOnly(True)
+        cipher_text.setObjectName('cipher_text')
 
         cipher_box = QDialog()
         cipher_box.setObjectName('cipher_box')
@@ -153,7 +155,6 @@ class MainWindow(QMainWindow):
         cipher_box.setLayout(layout)
 
         cipher_box.exec()
- 
 
 
 if __name__ == '__main__':
@@ -162,7 +163,7 @@ if __name__ == '__main__':
 
     QFontDatabase.addApplicationFont(str(Path('font/Roboto_Mono/RobotoMono-Bold.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/Roboto/Roboto-Medium.ttf')))
-    QFontDatabase.addApplicationFont(str(Path('font/Anonymous/AnonymousPro-Regular.ttf')))
+    QFontDatabase.addApplicationFont(str(Path('font/AnonymousPro/AnonymousPro-Regular.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/Roboto_Condensed/RobotoCondensed-Regular.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/Cubano/Cubano.ttf')))
     QFontDatabase.addApplicationFont(str(Path('font/MonomaniacOne/MonomaniacOne-Regular.ttf')))
