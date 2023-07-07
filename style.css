@@ -44,6 +44,7 @@ QLineEdit {
   color: #fefffe;
   font-size: 16px;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  border: none;
 }
 
 QLineEdit:focus {
