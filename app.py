@@ -11,7 +11,8 @@ from PyQt6.QtWidgets import (
     QVBoxLayout,
     QHBoxLayout,
     QFormLayout,
-    QDialog
+    QDialog,
+    QMessageBox
 )
 from PyQt6.QtGui import (
     QIcon, 
@@ -165,6 +166,10 @@ class MainWindow(QMainWindow):
         self.cipher_text.selectAll()
         self.cipher_text.copy()
 
+        copy_info = QMessageBox()
+        copy_info.setText("Copied to Clipboard")
+
+        copy_info.exec()
 
 if __name__ == '__main__':
 
