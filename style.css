@@ -68,3 +68,7 @@ QTextEdit#decryption:focus {
 QScrollBar {
   background-color: #121416;
 }
+
+QMessageBox {
+  background-color: #110f19;
+}
