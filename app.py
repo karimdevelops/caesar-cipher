@@ -142,19 +142,28 @@ class MainWindow(QMainWindow):
         shift_num = int(self.shift_num.text())
         mode = self.mode
 
-        cipher_text = QTextEdit(caesar_cipher(msg, shift_num, mode))
-        cipher_text.setReadOnly(True)
-        cipher_text.setObjectName('cipher_text')
+        layout = QVBoxLayout()
 
         cipher_box = QDialog()
         cipher_box.setObjectName('cipher_box')
 
-        layout = QVBoxLayout()
-        layout.addWidget(cipher_text)
-        
-        cipher_box.setLayout(layout)
+        self.cipher_text = QTextEdit(caesar_cipher(msg, shift_num, mode))
+        self.cipher_text.setReadOnly(True)
+        self.cipher_text.setObjectName('cipher_text')
 
+        copy_button = QPushButton('Copy')
+
+        copy_button.clicked.connect(self.copytext)
+
+        layout.addWidget(self.cipher_text)
+        layout.addWidget(copy_button)
+
+        cipher_box.setLayout(layout)
         cipher_box.exec()
+
+    def copytext(self):
+        self.cipher_text.selectAll()
+        self.cipher_text.copy()
 
 
 if __name__ == '__main__':
