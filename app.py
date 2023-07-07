@@ -11,7 +11,7 @@ from PyQt6.QtWidgets import (
     QVBoxLayout,
     QHBoxLayout,
     QFormLayout,
-    QMessageBox
+    QDialog
 )
 from PyQt6.QtGui import (
     QIcon, 
@@ -142,10 +142,15 @@ class MainWindow(QMainWindow):
         shift_num = int(self.shift_num.text())
         mode = self.mode
 
-        cipher_text = caesar_cipher(msg, shift_num, mode)
+        cipher_text = QLabel(caesar_cipher(msg, shift_num, mode))
 
-        cipher_box = QMessageBox()
-        cipher_box.setText(cipher_text)
+        cipher_box = QDialog()
+        cipher_box.setObjectName('cipher_box')
+
+        layout = QVBoxLayout()
+        layout.addWidget(cipher_text)
+        
+        cipher_box.setLayout(layout)
 
         cipher_box.exec()
  

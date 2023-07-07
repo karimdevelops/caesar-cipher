@@ -69,6 +69,6 @@ QScrollBar {
   background-color: #121416;
 }
 
-QMessageBox {
+QDialog {
   background-color: #110f19;
 }
