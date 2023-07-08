@@ -154,6 +154,8 @@ class MainWindow(QMainWindow):
 
         cipher_box = QDialog(self)
         cipher_box.setObjectName('cipher_box')
+        
+        cipher_box.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.CustomizeWindowHint)
 
         self.cipher_text = QTextEdit(caesar_cipher(msg, shift_num, mode))
         self.cipher_text.setReadOnly(True)
