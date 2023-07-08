@@ -145,7 +145,7 @@ class MainWindow(QMainWindow):
 
         layout = QVBoxLayout()
 
-        cipher_box = QDialog()
+        cipher_box = QDialog(self)
         cipher_box.setObjectName('cipher_box')
 
         self.cipher_text = QTextEdit(caesar_cipher(msg, shift_num, mode))
