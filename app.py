@@ -108,6 +108,9 @@ class MainWindow(QMainWindow):
         self.shift_num = QSpinBox()
         self.shift_num.setFixedSize(50, 22)
 
+        self.shift_num.setMinimum(1)
+        self.shift_num.setMaximum(20)
+
         input_prompt = QLabel("Message:")
         input_prompt.setObjectName('prompt')
         shift_prompt = QLabel("Shift number (1-20):")
