@@ -5,14 +5,14 @@ from PyQt6.QtWidgets import (
     QMainWindow, 
     QWidget, 
     QLabel,
-    QPushButton, 
-    QLineEdit, 
+    QPushButton,
     QTextEdit,
     QVBoxLayout,
     QHBoxLayout,
     QFormLayout,
     QDialog,
-    QMessageBox
+    QMessageBox,
+    QSpinBox
 )
 from PyQt6.QtGui import (
     QIcon, 
@@ -105,7 +105,7 @@ class MainWindow(QMainWindow):
         self.user_input.setPlaceholderText("Enter your text...")
         self.user_input.setFixedSize(800, 175)
 
-        self.shift_num = QLineEdit("")
+        self.shift_num = QSpinBox()
         self.shift_num.setFixedSize(50, 22)
 
         input_prompt = QLabel("Message:")
