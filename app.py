@@ -136,9 +136,9 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
         back_button.button.clicked.connect(self.initUI)
-        submit_button.button.clicked.connect(self.cipher)
+        submit_button.button.clicked.connect(self.cipherUI)
 
-    def cipher(self):
+    def cipherUI(self):
         msg = self.user_input.toPlainText()
         shift_num = int(self.shift_num.text())
         mode = self.mode
@@ -153,11 +153,15 @@ class MainWindow(QMainWindow):
         self.cipher_text.setObjectName('cipher_text')
 
         copy_button = QPushButton('Copy')
+        close_button = QPushButton('Close')
 
         copy_button.clicked.connect(self.copytext)
+        close_button.clicked.connect(self.initUI)
+        close_button.clicked.connect(cipher_box.close)
 
         layout.addWidget(self.cipher_text)
         layout.addWidget(copy_button)
+        layout.addWidget(close_button)
 
         cipher_box.setLayout(layout)
         cipher_box.exec()
