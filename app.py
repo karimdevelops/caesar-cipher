@@ -80,6 +80,9 @@ class MainWindow(QMainWindow):
         encryption_button.button.clicked.connect(self.inputUI)
         decryption_button.button.clicked.connect(self.inputUI)
 
+    def clearUI(self):
+        self.setCentralWidget(None)
+
 
     def inputUI(self):
         self.button_w = 155
@@ -136,6 +139,7 @@ class MainWindow(QMainWindow):
         self.setCentralWidget(self.widget)
 
         back_button.button.clicked.connect(self.initUI)
+        submit_button.button.clicked.connect(self.clearUI)
         submit_button.button.clicked.connect(self.cipherUI)
 
     def cipherUI(self):
