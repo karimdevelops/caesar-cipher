@@ -150,12 +150,12 @@ class MainWindow(QMainWindow):
         shift_num = int(self.shift_num.text())
         mode = self.mode
 
-        layout = QVBoxLayout()
+        dialog_layout = QVBoxLayout()
+        button_layout = QHBoxLayout()
 
-        cipher_box = QDialog(self)
-        cipher_box.setObjectName('cipher_box')
+        cipher_dialog = QDialog(self)
         
-        cipher_box.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.CustomizeWindowHint)
+        cipher_dialog.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.CustomizeWindowHint)
 
         self.cipher_text = QTextEdit(caesar_cipher(msg, shift_num, mode))
         self.cipher_text.setReadOnly(True)
@@ -166,14 +166,15 @@ class MainWindow(QMainWindow):
 
         copy_button.clicked.connect(self.copytext)
         close_button.clicked.connect(self.initUI)
-        close_button.clicked.connect(cipher_box.close)
+        close_button.clicked.connect(cipher_dialog.close)
 
-        layout.addWidget(self.cipher_text)
-        layout.addWidget(copy_button)
-        layout.addWidget(close_button)
+        dialog_layout.addWidget(self.cipher_text)
+        button_layout.addWidget(copy_button)
+        button_layout.addWidget(close_button)
+        dialog_layout.addLayout(button_layout)
 
-        cipher_box.setLayout(layout)
-        cipher_box.exec()
+        cipher_dialog.setLayout(dialog_layout)
+        cipher_dialog.exec()
 
     def copytext(self):
         self.cipher_text.selectAll()
