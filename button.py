@@ -10,10 +10,10 @@ from PyQt6.QtWidgets import (
 
 class Button(QWidget):
 
-    def __init__(self, text, w, h, hover_bool):
+    def __init__(self, text: str, w: int, h: int, hover: bool = False):
         super().__init__()
 
-        self.hover_bool = hover_bool
+        self.hover = hover
 
         self.default_w = w
         self.default_h = h
@@ -23,7 +23,7 @@ class Button(QWidget):
         self.setFixedSize(self.hover_w + 10, self.hover_h + 10)
 
         self.button = QPushButton(text)
-        if self.hover_bool == True:
+        if self.hover == True:
             self.button.setObjectName("button")
         self.button.setFixedSize(self.default_w, self.default_h)
 
@@ -34,11 +34,11 @@ class Button(QWidget):
 
 
     def enterEvent(self, QEnterEven):
-        if self.hover_bool == True:
+        if self.hover == True:
             self.button.setFixedSize(self.hover_w, self.hover_h)
             self.button.setStyleSheet("font-size: 49px")
 
     def leaveEvent(self, QEvent):
-        if self.hover_bool == True:
+        if self.hover == True:
             self.button.setFixedSize(self.default_w, self.default_h)
             self.button.setStyleSheet(f"font-size: 40px")
