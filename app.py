@@ -146,7 +146,7 @@ class MainWindow(QMainWindow):
     def cipherUI(self):
         self.button_w = 78
         self.button_h = 42
-        
+
         msg = self.user_input.toPlainText()
         shift_num = int(self.shift_num.text())
         mode = self.mode
@@ -155,6 +155,7 @@ class MainWindow(QMainWindow):
         button_layout = QHBoxLayout()
 
         cipher_dialog = QDialog(self)
+        cipher_dialog.setFixedSize(870, 250)
         
         cipher_dialog.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.CustomizeWindowHint)
 
