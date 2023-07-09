@@ -5,7 +5,6 @@ from PyQt6.QtWidgets import (
     QMainWindow, 
     QWidget, 
     QLabel,
-    QPushButton,
     QTextEdit,
     QVBoxLayout,
     QHBoxLayout,
@@ -16,8 +15,7 @@ from PyQt6.QtWidgets import (
 )
 from PyQt6.QtGui import (
     QIcon, 
-    QFontDatabase,
-    QPixmap
+    QFontDatabase
 )
 from PyQt6.QtCore import Qt
 
@@ -88,9 +86,9 @@ class MainWindow(QMainWindow):
         self.button_w = 155
         self. button_h = 70
 
-        submit_button = Button("Submit", self.button_w, self.button_h, False)
+        submit_button = Button("Submit", self.button_w, self.button_h)
 
-        back_button = Button("< Back", self.button_w, self.button_h, False)
+        back_button = Button("< Back", self.button_w, self.button_h)
 
         self.user_input = QTextEdit("")
         self.user_input.setAcceptRichText(False)
@@ -146,6 +144,9 @@ class MainWindow(QMainWindow):
         submit_button.button.clicked.connect(self.cipherUI)
 
     def cipherUI(self):
+        self.button_w = 78
+        self.button_h = 42
+        
         msg = self.user_input.toPlainText()
         shift_num = int(self.shift_num.text())
         mode = self.mode
@@ -161,12 +162,12 @@ class MainWindow(QMainWindow):
         self.cipher_text.setReadOnly(True)
         self.cipher_text.setObjectName('cipher_text')
 
-        copy_button = QPushButton('Copy')
-        close_button = QPushButton('Close')
+        copy_button = Button('Copy', self.button_w, self.button_h)
+        close_button = Button('Close', self.button_w + 10, self.button_h)
 
-        copy_button.clicked.connect(self.copytext)
-        close_button.clicked.connect(self.initUI)
-        close_button.clicked.connect(cipher_dialog.close)
+        copy_button.button.clicked.connect(self.copytext)
+        close_button.button.clicked.connect(self.initUI)
+        close_button.button.clicked.connect(cipher_dialog.close)
 
         dialog_layout.addWidget(self.cipher_text)
         button_layout.addWidget(copy_button)
