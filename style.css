@@ -76,6 +76,16 @@ QScrollBar::sub-line:vertical {
   border: none;
 }
 
+QScrollBar:handle {
+  background-color: lightgrey;
+  border: #ffffff solid 0px;
+  border-radius: 5px;
+}
+
+QScrollBar:handle::pressed {
+  background-color: lightslategrey;
+}
+
 QDialog {
   background-color: #110f19;
 }
