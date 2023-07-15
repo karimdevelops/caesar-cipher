@@ -69,6 +69,12 @@ QScrollBar {
   background-color: #121416;
 }
 
+QScrollBar::add-line:vertical, 
+QScrollBar::sub-line:vertical {
+  background: none;
+  border: none;
+}
+
 QDialog {
   background-color: #110f19;
 }
