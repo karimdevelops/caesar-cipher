@@ -84,7 +84,7 @@ class MainWindow(QMainWindow):
 
     def inputUI(self):
         self.button_w = 155
-        self. button_h = 70
+        self.button_h = 70
 
         submit_button = Button("Submit", self.button_w, self.button_h)
 
@@ -144,8 +144,8 @@ class MainWindow(QMainWindow):
         submit_button.button.clicked.connect(self.cipherUI)
 
     def cipherUI(self):
-        self.button_w = 78
-        self.button_h = 42
+        self.button_w = 82
+        self.button_h = 44
 
         msg = self.user_input.toPlainText()
         shift_num = int(self.shift_num.text())
@@ -164,7 +164,7 @@ class MainWindow(QMainWindow):
         self.cipher_text.setObjectName('cipher_text')
 
         copy_button = Button('Copy', self.button_w, self.button_h)
-        close_button = Button('Close', self.button_w + 10, self.button_h)
+        close_button = Button('Return', self.button_w + 30, self.button_h)
 
         copy_button.button.clicked.connect(self.copytext)
         close_button.button.clicked.connect(self.initUI)
