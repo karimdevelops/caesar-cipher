@@ -155,7 +155,7 @@ class MainWindow(QMainWindow):
         button_layout = QHBoxLayout()
 
         cipher_dialog = QDialog(self)
-        cipher_dialog.setFixedSize(870, 250)
+        cipher_dialog.setFixedSize(590, 350)
         
         cipher_dialog.setWindowFlags(Qt.WindowType.Dialog | Qt.WindowType.CustomizeWindowHint)
 
