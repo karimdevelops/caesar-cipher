@@ -12,4 +12,4 @@ Here's why:
 <li>It is a fun program for many beginners who are not only interested in GUIs but also crpytography.</li>
 </ul>
 
-:warning: <i><strong>NOTE: This project is mainly focused on creating an "easy to understand" crpytography program. Messages encrpyted by caesar cipher can be easily decrypted using a brute-force attack. Therefore, it is not recommended to use this for cryptography. Use at your own risk!</i>
+:warning: <i><strong>NOTE: This project is mainly focused on creating an "easy to understand" crpytography program. Messages encrpyted by caesar cipher can be easily decrypted using a brute-force attack. Therefore, it is not recommended to use this for anything important (or serious). Use at your own risk!</i>
