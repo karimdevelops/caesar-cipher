@@ -1,4 +1,4 @@
-## About the Project
+## About
 
 ![Caesar Cipher preview](img/preview.png)
 
