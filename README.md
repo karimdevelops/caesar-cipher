@@ -13,3 +13,7 @@ Here's why:
 </ul>
 
 :warning: <i><strong>NOTE: This project is mainly focused on creating an "easy to understand" crpytography program. Messages encrpyted by caesar cipher can be easily decrypted using a brute-force attack. Therefore, it is not recommended to use this for anything important (or serious). Use at your own risk!</i>
+<br><br>
+### Built With
+
+[![PyQT](https://img.shields.io/badge/PyQT-0041CD52?logo=Qt&logoColor=white)](https://pypi.org/project/PyQt6/)
