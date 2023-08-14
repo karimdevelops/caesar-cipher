@@ -1,7 +1,7 @@
 ## About
 <br><br>
 ![Caesar Cipher preview](img/preview.png)
-<br><br>
+<br><br><br><br>
 A crpytography program created based on the method of ancient romans called <strong>caesar cipher</strong>.
 There are many cryptography programs available on the internet, however, this program is better than many.
 
