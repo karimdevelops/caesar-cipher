@@ -2,8 +2,8 @@
 <br><br>
 ![Caesar Cipher preview](img/preview.png)
 <br><br><br><br>
-A crpytography program created based on the method of ancient romans called <strong>caesar cipher</strong>.
-There are many cryptography programs available on the internet, however, this program is better than many.
+A crpytography program based on the method of ancient romans called <strong>caesar cipher</strong>.
+There are many cryptography programs available on the internet, however, this program is relatively different <i>and of course</i> great.
 
 Here's why:
 <ul>
@@ -16,4 +16,8 @@ Here's why:
 <br><br>
 ### Built With
 
-[![PyQT](https://img.shields.io/badge/PyQT-0041CD52?logo=Qt&logoColor=white)](https://pypi.org/project/PyQt6/)
+<ul>
+<li>
+<a href="https://pypi.org/project/PyQt6/"><img src="https://img.shields.io/badge/PyQT-0041CD52?logo=Qt&logoColor=white&style=for-the-badge" height=35px></a>
+</li>
+</ul>
