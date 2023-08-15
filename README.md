@@ -38,13 +38,13 @@ Get a local copy up and run the programming following these simple steps.
 
 1. Clone the repo
 ```sh
-    https://github.com/karimdevelops/caesar-cipher
+https://github.com/karimdevelops/caesar-cipher
 ```
 2. Download dependencies
 ```sh
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 3. Run the program
 ```sh
-    python3 app.py
+python3 app.py
 ```
