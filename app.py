@@ -184,6 +184,8 @@ class MainWindow(QMainWindow):
 
         copy_info = QMessageBox()
         copy_info.setText("Copied to Clipboard")
+        copy_info.setStyleSheet("""color: #31fe5c;
+                                font-size: 20px""")
 
         copy_info.exec()
 
