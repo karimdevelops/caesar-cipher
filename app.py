@@ -164,6 +164,7 @@ class MainWindow(QMainWindow):
         self.cipher_text.setObjectName('cipher_text')
 
         copy_button = Button('Copy', self.button_w, self.button_h)
+        copy_button.setStyleSheet("color: #31fe5c; border-color: #31fe5c;")
         close_button = Button('Return', self.button_w + 30, self.button_h)
 
         copy_button.button.clicked.connect(self.copytext)
@@ -175,6 +176,9 @@ class MainWindow(QMainWindow):
         button_layout.addWidget(close_button)
         dialog_layout.addLayout(button_layout)
 
+        button_layout.setContentsMargins(320, 0, 60, 0)
+        button_layout.setSpacing(0)
+
         cipher_dialog.setLayout(dialog_layout)
         cipher_dialog.exec()
 
@@ -184,8 +188,7 @@ class MainWindow(QMainWindow):
 
         copy_info = QMessageBox()
         copy_info.setText("Copied to Clipboard")
-        copy_info.setStyleSheet("""color: #31fe5c;
-                                font-size: 20px""")
+        copy_info.setStyleSheet("color: #31fe5c; font-size: 20px;")
 
         copy_info.exec()
 
