@@ -29,9 +29,9 @@ Get a local copy up and run the programming following these simple steps.
 <ul>
     <li>
     python<br>
-    Visit the official python website to download it on your device:<br> https://www.python.org/downloads/
+    Visit the official python website to download it:<br> https://www.python.org/downloads/
     </li>
-    <li>pip<br>Make sure that you have pip installed as this program depends on a python library (pyqt6) which can be installed using pip.</li>
+    <li>pip<br>Pip is installed by default, make sure that you have pip installed as this program depends on some python dependencies which cannot be installed without pip.<br>However, if it is not installed then visit: https://pypi.org/project/pip/</li>
 </ul>
 
 ### Installation
