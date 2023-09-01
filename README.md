@@ -28,10 +28,9 @@ Get a local copy up and run the programming following these simple steps.
 ### Prerequisites
 <ul>
     <li>
-    python<br>
-    Visit the official python website to download it:<br> https://www.python.org/downloads/
+    Python<br>If you're using Linux or macOs, you probably have Python installed. If you're using Windows, you can download a Python installer from<br>https://www.python.org/downloads/windows/.
     </li>
-    <li>pip<br>Pip is installed by default, make sure that you have pip installed as this program depends on some python dependencies which cannot be installed without pip.<br>However, if it is not installed then visit: https://pypi.org/project/pip/</li>
+    <li>Pip<br>Python comes with `pip` preinstalled, however you can find `pip` installation instructions at<br>https://pip.pypa.io/en/stable/installing/.</li>
 </ul>
 
 ### Installation
