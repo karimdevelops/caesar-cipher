@@ -28,7 +28,7 @@ Get a local copy up and run the programming following these simple steps.
 ### Prerequisites
 <ul>
     <li>
-    Python<br>If you're using Linux or macOs, you probably have Python installed. If you're using Windows, you can download a Python installer from<br>https://www.python.org/downloads/windows/.
+    Python<br>If you're using Linux or macOS, you probably have Python installed. If you're using Windows, you can download a Python installer from<br>https://www.python.org/downloads/windows/.
     </li>
     <li>Pip<br>Python comes with `pip` preinstalled, however you can find `pip` installation instructions at<br>https://pip.pypa.io/en/stable/installing/.</li>
 </ul>
