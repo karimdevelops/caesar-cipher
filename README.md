@@ -39,7 +39,7 @@ https://github.com/karimdevelops/caesar-cipher
 ```
 2. Download dependencies
 ```sh
-pip3 install -r requirements.txt
+pip install -r requirements.txt
 ```
 3. Run the program
 ```sh
