@@ -17,9 +17,7 @@ Here's why:
 ### Built With
 
 <ul>
-<li>
 <a href="https://pypi.org/project/PyQt6/"><img src="https://img.shields.io/badge/PyQT-0041CD52?logo=Qt&logoColor=white&style=for-the-badge" height=35px></a>
-</li>
 </ul>
 
 ## Getting Started
@@ -30,7 +28,7 @@ Get a local copy up and run the programming following these simple steps.
     <li>
     Python<br>If you're using Linux or macOS, you probably have Python installed. If you're using Windows, you can download a Python installer from<br>https://www.python.org/downloads/windows/.
     </li>
-    <li>Pip<br>Python comes with `pip` preinstalled, however you can find `pip` installation instructions at<br>https://pip.pypa.io/en/stable/installing/.</li>
+    <li>Pip<br>Python comes with <code>pip</code> preinstalled, however you can find <code>pip</code> installation instructions at<br>https://pip.pypa.io/en/stable/installing/.</li>
 </ul>
 
 ### Installation
